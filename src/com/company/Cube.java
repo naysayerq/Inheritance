@@ -17,8 +17,8 @@ public class Cube {
 
     private int side;
 
-    // 1. Create constructor:
 
+    // Constructors
     // Constructor FULL
 
     public Cube(int side) {
@@ -30,7 +30,7 @@ public class Cube {
     public Cube() {
     }
 
-    // 2. Getters & Setters:
+    // Getters & Setters:
 
     public int getSide() {
         return side;
@@ -40,7 +40,7 @@ public class Cube {
         this.side = side;
     }
 
-    // 3. Creating five methods:
+    // Creating five methods:
 
     // First - Area
 
@@ -72,21 +72,22 @@ public class Cube {
         return ((Math.sqrt(3) / 2) * this.getSide());
     }
 
-    // 4. toString() method:
+    // toString() method:
 
     public String toString() {
-        return "Cube MyCube " +
-                "\nside = " + side +
-                "\narea = " + getArea() +
-                "\nvolume = " + getVolume() +
-                "\ndiagonal = " + getDiagonal() +
-                "\nangle between faces of a cube = "
+        return "Cube{" +
+                "side=" + side +
+                ", area=" + getArea() +
+                ", volume=" + getVolume() +
+                ", diagonal=" + getDiagonal() +
+                ", angle between faces of a cube="
                 + getAngleBetweenFaces() +
-                "\nradius of the described sphere = "
-                + getRadiusOfTheDescribedSphere();
+                ", radius of the described sphere="
+                + getRadiusOfTheDescribedSphere()
+                + "}";
     }
 
-    // 5. hash() and equals() methods:
+    // hash() and equals() methods:
 
     @Override
     public boolean equals(Object o) {

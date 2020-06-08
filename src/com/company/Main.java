@@ -18,17 +18,30 @@ public class Main {
 
     public static void main(String[] args) {
 
+        // TESTING
+
+        // Creating object of Rectangle
+
+        Rectangle myRectangle = new Rectangle(3, 4);
+        System.out.println(myRectangle.toString() + "\n");
+
+        // Creating object of Computer Monitor
+
         ComputerMonitor SE2719HR = new ComputerMonitor("black", "Dell",
                 75, 1920, 1080,
                 16, 9);
 
-        System.out.println(SE2719HR);
+        System.out.println(SE2719HR.toString() + "\n");
 
-        RubiksCube myCube = new RubiksCube(50, 80, 9, "r b y g w o");
+        // Creating object of Cube
 
-        System.out.println(myCube);
+        Cube myCube = new Cube (4);
+        System.out.println(myCube.toString() + "\n");;
 
+        // Creating object of Rubiks Cube
 
+        RubiksCube myRubiksCube = new RubiksCube(50, 80, 9, "r b y g w o");
+        System.out.println(myRubiksCube.toString());
     }
 }
 

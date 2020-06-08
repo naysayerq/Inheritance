@@ -11,6 +11,8 @@
 
 package com.company;
 
+import java.util.Objects;
+
 public class ComputerMonitor extends Rectangle{
 
     // Parameters
@@ -137,5 +139,27 @@ public class ComputerMonitor extends Rectangle{
                 ", aspectRatioLength=" + aspectRatioLength +
                 ", aspectRatioWidth=" + aspectRatioWidth +
                 '}';
+    }
+
+    // equals() and hashCode() methods
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        ComputerMonitor that = (ComputerMonitor) o;
+        return getRefreshRate() == that.getRefreshRate() &&
+                getResolutionLength() == that.getResolutionLength() &&
+                getResolutionWidth() == that.getResolutionWidth() &&
+                getAspectRatioLength() == that.getAspectRatioLength() &&
+                getAspectRatioWidth() == that.getAspectRatioWidth() &&
+                getColor().equals(that.getColor()) &&
+                getBrand().equals(that.getBrand());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), getColor(), getBrand(), getRefreshRate(), getResolutionLength(), getResolutionWidth(), getAspectRatioLength(), getAspectRatioWidth());
     }
 }
